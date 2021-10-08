@@ -1,0 +1,15 @@
+F:\asp_solution_webapi\VehicleWebAPI.DAL\obj\Debug\net5.0\VehicleWebAPI.DAL.csprojAssemblyReference.cache
+F:\asp_solution_webapi\VehicleWebAPI.DAL\obj\Debug\net5.0\VehicleWebAPI.DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\asp_solution_webapi\VehicleWebAPI.DAL\obj\Debug\net5.0\VehicleWebAPI.DAL.AssemblyInfoInputs.cache
+F:\asp_solution_webapi\VehicleWebAPI.DAL\obj\Debug\net5.0\VehicleWebAPI.DAL.AssemblyInfo.cs
+F:\asp_solution_webapi\VehicleWebAPI.DAL\obj\Debug\net5.0\VehicleWebAPI.DAL.csproj.CoreCompileInputs.cache
+F:\asp_solution_webapi\VehicleWebAPI.DAL\bin\Debug\net5.0\VehicleWebAPI.DAL.deps.json
+F:\asp_solution_webapi\VehicleWebAPI.DAL\bin\Debug\net5.0\VehicleWebAPI.DAL.runtimeconfig.json
+F:\asp_solution_webapi\VehicleWebAPI.DAL\bin\Debug\net5.0\VehicleWebAPI.DAL.runtimeconfig.dev.json
+F:\asp_solution_webapi\VehicleWebAPI.DAL\bin\Debug\net5.0\VehicleWebAPI.DAL.dll
+F:\asp_solution_webapi\VehicleWebAPI.DAL\bin\Debug\net5.0\ref\VehicleWebAPI.DAL.dll
+F:\asp_solution_webapi\VehicleWebAPI.DAL\bin\Debug\net5.0\VehicleWebAPI.DAL.pdb
+F:\asp_solution_webapi\VehicleWebAPI.DAL\obj\Debug\net5.0\VehicleWebAPI.DAL.dll
+F:\asp_solution_webapi\VehicleWebAPI.DAL\obj\Debug\net5.0\ref\VehicleWebAPI.DAL.dll
+F:\asp_solution_webapi\VehicleWebAPI.DAL\obj\Debug\net5.0\VehicleWebAPI.DAL.pdb
+F:\asp_solution_webapi\VehicleWebAPI.DAL\obj\Debug\net5.0\VehicleWebAPI.DAL.genruntimeconfig.cache

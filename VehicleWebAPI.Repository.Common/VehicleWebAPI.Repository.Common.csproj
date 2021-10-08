@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\VehicleWebAPI.Model.Common\VehicleWebAPI.Model.Common.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.Common\VehicleWebAPI.Common.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

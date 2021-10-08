@@ -1,0 +1,12 @@
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\obj\Debug\net5.0\VehicleWebAPI.Model.Common.csprojAssemblyReference.cache
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\obj\Debug\net5.0\VehicleWebAPI.Model.Common.GeneratedMSBuildEditorConfig.editorconfig
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\obj\Debug\net5.0\VehicleWebAPI.Model.Common.AssemblyInfoInputs.cache
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\obj\Debug\net5.0\VehicleWebAPI.Model.Common.AssemblyInfo.cs
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\obj\Debug\net5.0\VehicleWebAPI.Model.Common.csproj.CoreCompileInputs.cache
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\bin\Debug\net5.0\VehicleWebAPI.Model.Common.deps.json
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\bin\Debug\net5.0\VehicleWebAPI.Model.Common.dll
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\bin\Debug\net5.0\ref\VehicleWebAPI.Model.Common.dll
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\bin\Debug\net5.0\VehicleWebAPI.Model.Common.pdb
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\obj\Debug\net5.0\VehicleWebAPI.Model.Common.dll
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\obj\Debug\net5.0\ref\VehicleWebAPI.Model.Common.dll
+F:\asp_solution_webapi\VehicleWebAPI.Model.Common\obj\Debug\net5.0\VehicleWebAPI.Model.Common.pdb

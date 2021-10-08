@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\asp_solution_webapi\\VehicleWebAPI.WebAPI.Tests\\VehicleWebAPI.WebAPI.Tests.csproj": {}
+    "f:\\asp_solution_webapi\\VehicleWebAPI.WebAPI.Tests\\VehicleWebAPI.WebAPI.Tests.csproj": {}
   },
   "projects": {
-    "F:\\asp_solution_webapi\\VehicleWebAPI.WebAPI.Tests\\VehicleWebAPI.WebAPI.Tests.csproj": {
+    "f:\\asp_solution_webapi\\VehicleWebAPI.WebAPI.Tests\\VehicleWebAPI.WebAPI.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\asp_solution_webapi\\VehicleWebAPI.WebAPI.Tests\\VehicleWebAPI.WebAPI.Tests.csproj",
+        "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.WebAPI.Tests\\VehicleWebAPI.WebAPI.Tests.csproj",
         "projectName": "VehicleWebAPI.WebAPI.Tests",
-        "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.WebAPI.Tests\\VehicleWebAPI.WebAPI.Tests.csproj",
+        "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.WebAPI.Tests\\VehicleWebAPI.WebAPI.Tests.csproj",
         "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
-        "outputPath": "F:\\asp_solution_webapi\\VehicleWebAPI.WebAPI.Tests\\obj\\",
+        "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.WebAPI.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"

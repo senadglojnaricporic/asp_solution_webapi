@@ -1,9 +1,12 @@
 namespace VehicleWebAPI.Model.Common
 {
-    public interface IVehicleModelGenericModel<T> where TEntity : class, IVehicleBaseModel
+    public interface IVehicleModelGenericModel<TEntity> where TEntity : class
     {
+        int Id { get; set; }
         int MakeId { get; set; }
+        string Name { get; set; }
+        string Abrv { get; set; }
 
-        T VehicleMake { get; set; }
+        TEntity VehicleMake { get; set; }
     }
 }

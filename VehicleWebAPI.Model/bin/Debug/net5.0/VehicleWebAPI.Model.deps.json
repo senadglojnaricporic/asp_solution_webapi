@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "VehicleWebAPI.Model/1.0.0": {
+        "dependencies": {
+          "VehicleWebAPI.Model.Common": "1.0.0"
+        },
+        "runtime": {
+          "VehicleWebAPI.Model.dll": {}
+        }
+      },
+      "VehicleWebAPI.Model.Common/1.0.0": {
+        "runtime": {
+          "VehicleWebAPI.Model.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VehicleWebAPI.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleWebAPI.Model.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

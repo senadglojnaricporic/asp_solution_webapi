@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "VehicleWebAPI.Repository/1.0.0": {
+        "runtime": {
+          "VehicleWebAPI.Repository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VehicleWebAPI.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
