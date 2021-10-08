@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using VehicleWebAPI.Common;
 using VehicleWebAPI.Repository.Common;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace VehicleWebAPI.Repository
 {
@@ -17,14 +18,14 @@ namespace VehicleWebAPI.Repository
             _DbContext = DbContext;
         }
 
-        public async Task SaveAsync<T>() where T : class
+        public async Task<int> SaveAsync<T>() where T : class
         {
-            await _DbContext.SaveChangesAsync();
+            return await _DbContext.SaveChangesAsync();
         }
 
-        public async Task CreateAsync<T>(T entity) where T : class
+        public async Task<EntityEntry<T>> CreateAsync<T>(T entity) where T : class
         {
-            await _DbContext.Set<T>().AddAsync(entity);
+            return await _DbContext.Set<T>().AddAsync(entity);
         }
 
         public async Task<T> ReadByIdAsync<T>(int id) where T : class
@@ -32,15 +33,15 @@ namespace VehicleWebAPI.Repository
             return await _DbContext.Set<T>().FindAsync(id);
         }
 
-        public void UpdateAsync<T>(T entity) where T : class
+        public EntityEntry<T> Update<T>(T entity) where T : class
         {
-            _DbContext.Set<T>().Update(entity);
+            return _DbContext.Set<T>().Update(entity);
         }
 
-        public async Task DeleteAsync<T>(int id) where T : class
+        public async Task<EntityEntry<T>> DeleteAsync<T>(int id) where T : class
         {
             var entity = await _DbContext.Set<T>().FindAsync(id);
-            _DbContext.Set<T>().Remove(entity);
+            return _DbContext.Set<T>().Remove(entity);
         }
 
         public async Task<IList<T>> GetListAsync<T>(ListParams parameters, Func<IQueryable<T>, string, string, IQueryable<T>> filterAndSort = null) where T : class

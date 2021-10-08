@@ -4,14 +4,14 @@
     "F:\\asp_solution_webapi\\VehicleWebAPI.Repository.Common\\VehicleWebAPI.Repository.Common.csproj": {}
   },
   "projects": {
-    "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj": {
+    "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj",
-        "projectName": "VehicleWebAPI.Model.Common",
-        "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj",
+        "projectUniqueName": "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj",
+        "projectName": "VehicleWebAPI.Common",
+        "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj",
         "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
-        "outputPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\obj\\",
+        "outputPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -78,8 +78,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj": {
-                "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj"
+              "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj": {
+                "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj"
               }
             }
           }
@@ -93,6 +93,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
