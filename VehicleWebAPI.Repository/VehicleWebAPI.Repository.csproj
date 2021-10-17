@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\VehicleWebAPI.Repository.Common\VehicleWebAPI.Repository.Common.csproj" />
     <ProjectReference Include="..\VehicleWebAPI.Common\VehicleWebAPI.Common.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.Model\VehicleWebAPI.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>
