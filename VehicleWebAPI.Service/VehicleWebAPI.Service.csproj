@@ -4,14 +4,12 @@
     <ProjectReference Include="..\VehicleWebAPI.Repository.Common\VehicleWebAPI.Repository.Common.csproj" />
     <ProjectReference Include="..\VehicleWebAPI.Model\VehicleWebAPI.Model.csproj" />
     <ProjectReference Include="..\VehicleWebAPI.Model.Common\VehicleWebAPI.Model.Common.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.Service.Common\VehicleWebAPI.Service.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.11">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="*" />
   </ItemGroup>
 
   <PropertyGroup>

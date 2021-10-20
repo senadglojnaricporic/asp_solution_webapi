@@ -2,11 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using VehicleWebAPI.DAL;
 using VehicleWebAPI.Model;
+using VehicleWebAPI.Model.Common;
+using VehicleWebAPI.Service;
+using VehicleWebAPI.Service.Common;
 
 namespace VehicleWebAPI.WebAPI
 {
@@ -14,53 +17,57 @@ namespace VehicleWebAPI.WebAPI
     [ApiController]
     public class VehicleMakeController : ControllerBase
     {
-        private readonly VehicleWebAPIDbContext _context;
+        private readonly IVehicleMakeService<IVehicleMakeGenericModel<VehicleModelViewModel>> _service;
+        private readonly IMapper _mapper;
 
-        public VehicleMakeController(VehicleWebAPIDbContext context)
+        public VehicleMakeController(IVehicleMakeService<IVehicleMakeGenericModel<VehicleModelViewModel>> service,
+                                    IMapper mapper)
         {
-            _context = context;
+            _service = service;
+            _mapper = mapper;
         }
 
-        // GET: api/VehicleMake
+        // GET: api/[VehicleMake]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<VehicleMakeDataModel>>> GetVehicleMakeDataModel()//get all, page, sort, filter
+        public async Task<ActionResult<IEnumerable<VehicleMakeViewModel>>> GetVehicleMakeDataModel([FromQuery] QueryModel model)//get all, page, sort, filter
         {
-            return await _context.VehicleMakeDataModel.ToListAsync();
+            var filtering = _mapper.Map<FilteringMakeModel>(model);
+            var sorting = _mapper.Map<SortingMakeModel>(model);
+            var paging = _mapper.Map<PagingMakeModel>(model);
+            return (List<VehicleMakeViewModel>) await _service.GetPageAsync(filtering, sorting, paging);
         }
 
         // GET: api/VehicleMake/5
         [HttpGet("{id}")]
         public async Task<ActionResult<VehicleMakeViewModel>> GetVehicleMakeDataModel(int id)//read by id
         {
-            var vehicleMakeDataModel = await _context.VehicleMakeDataModel.FindAsync(id);
+            var vehicleMakeViewModel = await _service.ReadItemAsync(id);
 
-            if (vehicleMakeDataModel == null)
+            if (vehicleMakeViewModel == null)
             {
                 return NotFound();
             }
 
-            return vehicleMakeDataModel;
+            return (VehicleMakeViewModel)vehicleMakeViewModel;
         }
 
         // PUT: api/VehicleMake/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutVehicleMakeDataModel(int id, VehicleMakeDataModel vehicleMakeDataModel)//update
+        public async Task<IActionResult> PutVehicleMakeDataModel(int id, VehicleMakeViewModel vehicleMakeViewModel)//update
         {
-            if (id != vehicleMakeDataModel.Id)
+            if (id != vehicleMakeViewModel.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(vehicleMakeDataModel).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                await _service.UpdateItemAsync(vehicleMakeViewModel);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VehicleMakeDataModelExists(id))
+                if (!(await VehicleMakeDataModelExists(id)))
                 {
                     return NotFound();
                 }
@@ -78,8 +85,7 @@ namespace VehicleWebAPI.WebAPI
         [HttpPost]
         public async Task<ActionResult<VehicleMakeViewModel>> PostVehicleMakeDataModel(VehicleMakeViewModel vehicleMakeViewModel)//create new
         {
-            _context.VehicleMakeDataModel.Add(vehicleMakeViewModel);
-            await _context.SaveChangesAsync();
+            await _service.CreateItemAsync(vehicleMakeViewModel);
 
             return CreatedAtAction("GetVehicleMakeViewModel", new { id = vehicleMakeViewModel.Id }, vehicleMakeViewModel);
         }
@@ -88,21 +94,18 @@ namespace VehicleWebAPI.WebAPI
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVehicleMakeDataModel(int id)//delete
         {
-            var vehicleMakeDataModel = await _context.VehicleMakeDataModel.FindAsync(id);
-            if (vehicleMakeDataModel == null)
+            var success = await _service.DeleteItemAsync(id);
+            if (!success)
             {
                 return NotFound();
             }
 
-            _context.VehicleMakeDataModel.Remove(vehicleMakeDataModel);
-            await _context.SaveChangesAsync();
-
             return NoContent();
         }
 
-        private bool VehicleMakeDataModelExists(int id)
+        private async Task<bool> VehicleMakeDataModelExists(int id)
         {
-            return _context.VehicleMakeDataModel.Any(e => e.Id == id);
+            return await _service.ReadItemAsync(id) != null;
         }
     }
 }

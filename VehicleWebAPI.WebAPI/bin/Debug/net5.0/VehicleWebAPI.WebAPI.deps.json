@@ -34,8 +34,13 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Swashbuckle.AspNetCore": "5.6.3",
+          "VehicleWebAPI.DAL": "1.0.0",
           "VehicleWebAPI.Model": "1.0.0",
           "VehicleWebAPI.Model.Common": "1.0.0",
+          "VehicleWebAPI.Repository": "1.0.0",
+          "VehicleWebAPI.Repository.Common": "1.0.0",
+          "VehicleWebAPI.Service": "1.0.0",
+          "VehicleWebAPI.Service.Common": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -390,6 +395,9 @@
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
           }
+        },
+        "compile": {
+          "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -2082,6 +2090,27 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "VehicleWebAPI.Common/1.0.0": {
+        "runtime": {
+          "VehicleWebAPI.Common.dll": {}
+        },
+        "compile": {
+          "VehicleWebAPI.Common.dll": {}
+        }
+      },
+      "VehicleWebAPI.DAL/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.11",
+          "VehicleWebAPI.Model": "1.0.0"
+        },
+        "runtime": {
+          "VehicleWebAPI.DAL.dll": {}
+        },
+        "compile": {
+          "VehicleWebAPI.DAL.dll": {}
+        }
+      },
       "VehicleWebAPI.Model/1.0.0": {
         "dependencies": {
           "VehicleWebAPI.Model.Common": "1.0.0"
@@ -2099,6 +2128,55 @@
         },
         "compile": {
           "VehicleWebAPI.Model.Common.dll": {}
+        }
+      },
+      "VehicleWebAPI.Repository/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
+          "VehicleWebAPI.Common": "1.0.0",
+          "VehicleWebAPI.Model": "1.0.0",
+          "VehicleWebAPI.Repository.Common": "1.0.0"
+        },
+        "runtime": {
+          "VehicleWebAPI.Repository.dll": {}
+        },
+        "compile": {
+          "VehicleWebAPI.Repository.dll": {}
+        }
+      },
+      "VehicleWebAPI.Repository.Common/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11"
+        },
+        "runtime": {
+          "VehicleWebAPI.Repository.Common.dll": {}
+        },
+        "compile": {
+          "VehicleWebAPI.Repository.Common.dll": {}
+        }
+      },
+      "VehicleWebAPI.Service/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
+          "VehicleWebAPI.Model": "1.0.0",
+          "VehicleWebAPI.Model.Common": "1.0.0",
+          "VehicleWebAPI.Repository.Common": "1.0.0",
+          "VehicleWebAPI.Service.Common": "1.0.0"
+        },
+        "runtime": {
+          "VehicleWebAPI.Service.dll": {}
+        },
+        "compile": {
+          "VehicleWebAPI.Service.dll": {}
+        }
+      },
+      "VehicleWebAPI.Service.Common/1.0.0": {
+        "runtime": {
+          "VehicleWebAPI.Service.Common.dll": {}
+        },
+        "compile": {
+          "VehicleWebAPI.Service.Common.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4789,12 +4867,42 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
+    "VehicleWebAPI.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleWebAPI.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "VehicleWebAPI.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "VehicleWebAPI.Model.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleWebAPI.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleWebAPI.Repository.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleWebAPI.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleWebAPI.Service.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -22,6 +22,11 @@
   <ItemGroup>
     <ProjectReference Include="..\VehicleWebAPI.Model.Common\VehicleWebAPI.Model.Common.csproj" />
     <ProjectReference Include="..\VehicleWebAPI.Model\VehicleWebAPI.Model.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.Service.Common\VehicleWebAPI.Service.Common.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.DAL\VehicleWebAPI.DAL.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.Repository.Common\VehicleWebAPI.Repository.Common.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.Repository\VehicleWebAPI.Repository.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.Service\VehicleWebAPI.Service.csproj" />
   </ItemGroup>
 
 </Project>

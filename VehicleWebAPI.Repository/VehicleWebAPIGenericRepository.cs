@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace VehicleWebAPI.Repository
 {
-    public class VehicleWebAPIGenericRepository<T> where T : class, IVehicleWebAPIGenericRepository<T>
+    public class VehicleWebAPIGenericRepository<T> : IVehicleWebAPIGenericRepository<T> where T : class
     {
         private readonly DbContext _DbContext;
 
@@ -40,6 +40,12 @@ namespace VehicleWebAPI.Repository
         public async Task<EntityEntry<T>> DeleteAsync(int id) 
         {
             var entity = await _DbContext.Set<T>().FindAsync(id);
+
+            if(entity == null)
+            {
+                return null;
+            }
+
             return _DbContext.Set<T>().Remove(entity);
         }
 

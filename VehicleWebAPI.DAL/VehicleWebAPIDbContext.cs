@@ -1,10 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using VehicleWebAPI.Model;
 
 namespace VehicleWebAPI.DAL
 {
-    public class VehicleWebAPIDbContext : DbContext
+    public sealed class VehicleWebAPIDbContext : DbContext
     {
         private readonly string _connectionString;
+
+        public DbSet<VehicleMakeDataModel> VehicleMakes { get; set; }
 
         public VehicleWebAPIDbContext(string connectionString = null)
         {
