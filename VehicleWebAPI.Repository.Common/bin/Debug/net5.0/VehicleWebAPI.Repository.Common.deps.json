@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "VehicleWebAPI.Repository.Common/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "5.0.11"
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
+          "VehicleWebAPI.Common": "1.0.0"
         },
         "runtime": {
           "VehicleWebAPI.Repository.Common.dll": {}
@@ -182,6 +183,28 @@
             "fileVersion": "5.0.220.61120"
           }
         }
+      },
+      "VehicleWebAPI.Common/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
+          "VehicleWebAPI.Model": "1.0.0"
+        },
+        "runtime": {
+          "VehicleWebAPI.Common.dll": {}
+        }
+      },
+      "VehicleWebAPI.Model/1.0.0": {
+        "dependencies": {
+          "VehicleWebAPI.Model.Common": "1.0.0"
+        },
+        "runtime": {
+          "VehicleWebAPI.Model.dll": {}
+        }
+      },
+      "VehicleWebAPI.Model.Common/1.0.0": {
+        "runtime": {
+          "VehicleWebAPI.Model.Common.dll": {}
+        }
       }
     }
   },
@@ -323,6 +346,21 @@
       "sha512": "sha512-uXQEYqav2V3zP6OwkOKtLv+qIi6z3m1hsGyKwXX7ZA7htT4shoVccGxnJ9kVRFPNAsi1ArZTq2oh7WOto6GbkQ==",
       "path": "system.diagnostics.diagnosticsource/5.0.1",
       "hashPath": "system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+    },
+    "VehicleWebAPI.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleWebAPI.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleWebAPI.Model.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

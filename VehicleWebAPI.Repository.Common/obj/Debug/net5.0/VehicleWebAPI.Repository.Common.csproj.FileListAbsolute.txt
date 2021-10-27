@@ -13,3 +13,10 @@ F:\asp_solution_webapi\VehicleWebAPI.Repository.Common\obj\Debug\net5.0\VehicleW
 F:\asp_solution_webapi\VehicleWebAPI.Repository.Common\obj\Debug\net5.0\ref\VehicleWebAPI.Repository.Common.dll
 F:\asp_solution_webapi\VehicleWebAPI.Repository.Common\obj\Debug\net5.0\VehicleWebAPI.Repository.Common.pdb
 F:\asp_solution_webapi\VehicleWebAPI.Repository.Common\obj\Debug\net5.0\VehicleWebAPI.Repository.Common.genruntimeconfig.cache
+F:\asp_solution_webapi\VehicleWebAPI.Repository.Common\bin\Debug\net5.0\VehicleWebAPI.Common.dll
+F:\asp_solution_webapi\VehicleWebAPI.Repository.Common\bin\Debug\net5.0\VehicleWebAPI.Model.Common.dll
+F:\asp_solution_webapi\VehicleWebAPI.Repository.Common\bin\Debug\net5.0\VehicleWebAPI.Model.dll
+F:\asp_solution_webapi\VehicleWebAPI.Repository.Common\bin\Debug\net5.0\VehicleWebAPI.Common.pdb
+F:\asp_solution_webapi\VehicleWebAPI.Repository.Common\bin\Debug\net5.0\VehicleWebAPI.Model.pdb
+F:\asp_solution_webapi\VehicleWebAPI.Repository.Common\bin\Debug\net5.0\VehicleWebAPI.Model.Common.pdb
+F:\asp_solution_webapi\VehicleWebAPI.Repository.Common\obj\Debug\net5.0\VehicleWebAPI.Repository.Common.csproj.CopyComplete

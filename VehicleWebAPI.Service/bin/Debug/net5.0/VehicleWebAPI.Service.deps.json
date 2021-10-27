@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "10.1.1",
           "Microsoft.EntityFrameworkCore.Design": "5.0.11",
+          "VehicleWebAPI.Common": "1.0.0",
           "VehicleWebAPI.Model": "1.0.0",
           "VehicleWebAPI.Model.Common": "1.0.0",
           "VehicleWebAPI.Repository.Common": "1.0.0",
@@ -201,6 +202,15 @@
         }
       },
       "System.Reflection.Emit/4.7.0": {},
+      "VehicleWebAPI.Common/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
+          "VehicleWebAPI.Model": "1.0.0"
+        },
+        "runtime": {
+          "VehicleWebAPI.Common.dll": {}
+        }
+      },
       "VehicleWebAPI.Model/1.0.0": {
         "dependencies": {
           "VehicleWebAPI.Model.Common": "1.0.0"
@@ -216,13 +226,18 @@
       },
       "VehicleWebAPI.Repository.Common/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "5.0.11"
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
+          "VehicleWebAPI.Common": "1.0.0"
         },
         "runtime": {
           "VehicleWebAPI.Repository.Common.dll": {}
         }
       },
       "VehicleWebAPI.Service.Common/1.0.0": {
+        "dependencies": {
+          "VehicleWebAPI.Common": "1.0.0",
+          "VehicleWebAPI.Model": "1.0.0"
+        },
         "runtime": {
           "VehicleWebAPI.Service.Common.dll": {}
         }
@@ -381,6 +396,11 @@
       "sha512": "sha512-VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
       "path": "system.reflection.emit/4.7.0",
       "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
+    },
+    "VehicleWebAPI.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "VehicleWebAPI.Model/1.0.0": {
       "type": "project",

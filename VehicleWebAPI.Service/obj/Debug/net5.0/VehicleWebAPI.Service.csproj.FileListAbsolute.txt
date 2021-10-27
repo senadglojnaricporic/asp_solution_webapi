@@ -22,3 +22,5 @@ F:\asp_solution_webapi\VehicleWebAPI.Service\obj\Debug\net5.0\VehicleWebAPI.Serv
 F:\asp_solution_webapi\VehicleWebAPI.Service\obj\Debug\net5.0\ref\VehicleWebAPI.Service.dll
 F:\asp_solution_webapi\VehicleWebAPI.Service\obj\Debug\net5.0\VehicleWebAPI.Service.pdb
 F:\asp_solution_webapi\VehicleWebAPI.Service\obj\Debug\net5.0\VehicleWebAPI.Service.genruntimeconfig.cache
+F:\asp_solution_webapi\VehicleWebAPI.Service\bin\Debug\net5.0\VehicleWebAPI.Common.dll
+F:\asp_solution_webapi\VehicleWebAPI.Service\bin\Debug\net5.0\VehicleWebAPI.Common.pdb

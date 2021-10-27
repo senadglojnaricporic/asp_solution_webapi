@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using VehicleWebAPI.Model;
-using VehicleWebAPI.Model.Common;
 using VehicleWebAPI.Service;
 using VehicleWebAPI.Service.Common;
 
@@ -17,10 +16,10 @@ namespace VehicleWebAPI.WebAPI
     [ApiController]
     public class VehicleMakeController : ControllerBase
     {
-        private readonly IVehicleMakeService<IVehicleMakeGenericModel<VehicleModelViewModel>> _service;
+        private readonly IVehicleGenericService<IVehicleMakeDataModel, VehicleMakeDataModel> _service;
         private readonly IMapper _mapper;
 
-        public VehicleMakeController(IVehicleMakeService<IVehicleMakeGenericModel<VehicleModelViewModel>> service,
+        public VehicleMakeController(IVehicleGenericService<IVehicleMakeDataModel, VehicleMakeDataModel> service,
                                     IMapper mapper)
         {
             _service = service;
@@ -34,19 +33,23 @@ namespace VehicleWebAPI.WebAPI
             var filtering = _mapper.Map<FilteringMakeModel>(model);
             var sorting = _mapper.Map<SortingMakeModel>(model);
             var paging = _mapper.Map<PagingMakeModel>(model);
-            return (List<VehicleMakeViewModel>) await _service.GetPageAsync(filtering, sorting, paging);
+            var dataList = await _service.FindDataAsync(filtering, sorting, paging);
+            var viewlist = _mapper.Map<IEnumerable<VehicleMakeViewModel>>(dataList);
+            return (List<VehicleMakeViewModel>) viewlist;
         }
 
         // GET: api/VehicleMake/5
         [HttpGet("{id}")]
         public async Task<ActionResult<VehicleMakeViewModel>> GetVehicleMakeDataModel(int id)//read by id
         {
-            var vehicleMakeViewModel = await _service.ReadItemAsync(id);
+            var vehicleMakeDataModel = await _service.ReadItemAsync(id);
 
-            if (vehicleMakeViewModel == null)
+            if (vehicleMakeDataModel == null)
             {
                 return NotFound();
             }
+
+            var vehicleMakeViewModel = _mapper.Map<VehicleMakeViewModel>(vehicleMakeDataModel);
 
             return (VehicleMakeViewModel)vehicleMakeViewModel;
         }
@@ -63,7 +66,8 @@ namespace VehicleWebAPI.WebAPI
 
             try
             {
-                await _service.UpdateItemAsync(vehicleMakeViewModel);
+                var vehicleMakeDataModel = _mapper.Map<VehicleMakeDataModel>(vehicleMakeViewModel);
+                await _service.UpdateItemAsync(vehicleMakeDataModel);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -85,7 +89,8 @@ namespace VehicleWebAPI.WebAPI
         [HttpPost]
         public async Task<ActionResult<VehicleMakeViewModel>> PostVehicleMakeDataModel(VehicleMakeViewModel vehicleMakeViewModel)//create new
         {
-            await _service.CreateItemAsync(vehicleMakeViewModel);
+            var vehicleMakeDataModel = _mapper.Map<VehicleMakeDataModel>(vehicleMakeViewModel);
+            await _service.CreateItemAsync(vehicleMakeDataModel);
 
             return CreatedAtAction("GetVehicleMakeViewModel", new { id = vehicleMakeViewModel.Id }, vehicleMakeViewModel);
         }

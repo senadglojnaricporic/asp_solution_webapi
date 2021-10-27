@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 using VehicleWebAPI.Repository.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using VehicleWebAPI.Common;
 
 namespace VehicleWebAPI.Repository
 {
-    public class VehicleWebAPIGenericRepository<T> : IVehicleWebAPIGenericRepository<T> where T : class
+    public class VehicleWebAPIGenericRepository<T> : IVehicleWebAPIGenericRepository<T> 
+    where T : class
+    
     {
         private readonly DbContext _DbContext;
 
@@ -55,5 +58,20 @@ namespace VehicleWebAPI.Repository
              return _source;
         }
 
+        public async Task<IEnumerable<T>> FindDataAsync(IFilteringGenericModel<T> filtering, ISortingGenericModel<T> sorting, IPagingGenericModel<T> paging)
+        {
+            var source = GetTable();
+
+            if(!String.IsNullOrEmpty(filtering.filterType))
+            {
+                filtering.Filter(ref source);
+            }
+
+            sorting.Sort(ref source);
+
+            var listDataModel = await paging.PageAsync(source);
+
+            return listDataModel;
+        }
     }
 }

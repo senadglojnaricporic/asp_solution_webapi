@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using VehicleWebAPI.Model.Common;
+
 
 namespace VehicleWebAPI.Model
 {
-    public class VehicleMakeDataModel : IVehicleMakeGenericModel<VehicleModelDataModel>
+    public class VehicleMakeDataModel : IVehicleMakeDataModel
     {
         [Key]
         public int Id { get; set; }

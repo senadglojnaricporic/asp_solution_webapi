@@ -10,3 +10,11 @@ F:\asp_solution_webapi\VehicleWebAPI.Common\obj\Debug\net5.0\VehicleWebAPI.Commo
 F:\asp_solution_webapi\VehicleWebAPI.Common\obj\Debug\net5.0\VehicleWebAPI.Common.dll
 F:\asp_solution_webapi\VehicleWebAPI.Common\obj\Debug\net5.0\ref\VehicleWebAPI.Common.dll
 F:\asp_solution_webapi\VehicleWebAPI.Common\obj\Debug\net5.0\VehicleWebAPI.Common.pdb
+F:\asp_solution_webapi\VehicleWebAPI.Common\bin\Debug\net5.0\VehicleWebAPI.Common.runtimeconfig.json
+F:\asp_solution_webapi\VehicleWebAPI.Common\bin\Debug\net5.0\VehicleWebAPI.Common.runtimeconfig.dev.json
+F:\asp_solution_webapi\VehicleWebAPI.Common\bin\Debug\net5.0\VehicleWebAPI.Model.Common.dll
+F:\asp_solution_webapi\VehicleWebAPI.Common\bin\Debug\net5.0\VehicleWebAPI.Model.dll
+F:\asp_solution_webapi\VehicleWebAPI.Common\bin\Debug\net5.0\VehicleWebAPI.Model.pdb
+F:\asp_solution_webapi\VehicleWebAPI.Common\bin\Debug\net5.0\VehicleWebAPI.Model.Common.pdb
+F:\asp_solution_webapi\VehicleWebAPI.Common\obj\Debug\net5.0\VehicleWebAPI.Common.csproj.CopyComplete
+F:\asp_solution_webapi\VehicleWebAPI.Common\obj\Debug\net5.0\VehicleWebAPI.Common.genruntimeconfig.cache

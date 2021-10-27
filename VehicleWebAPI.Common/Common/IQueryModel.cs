@@ -1,4 +1,4 @@
-namespace VehicleWebAPI.Service.Common
+namespace VehicleWebAPI.Common
 {
     public interface IQueryModel
     {

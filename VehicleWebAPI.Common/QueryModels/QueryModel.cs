@@ -1,4 +1,4 @@
-using VehicleWebAPI.Service.Common;
+using VehicleWebAPI.Common;
 
 namespace VehicleWebAPI.WebAPI
 {

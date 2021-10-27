@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace VehicleWebAPI.Service.Common
+namespace VehicleWebAPI.Common
 {
     public interface IFilteringGenericModel<T> where T : class
     {

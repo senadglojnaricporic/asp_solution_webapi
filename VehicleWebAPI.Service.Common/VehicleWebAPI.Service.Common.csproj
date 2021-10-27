@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VehicleWebAPI.Model\VehicleWebAPI.Model.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.Common\VehicleWebAPI.Common.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

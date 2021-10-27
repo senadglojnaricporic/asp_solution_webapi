@@ -220,6 +220,43 @@
         "runtime": {
           "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {}
         }
+      },
+      "VehicleWebAPI.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "0.0.0",
+          "VehicleWebAPI.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VehicleWebAPI.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VehicleWebAPI.Common.dll": {}
+        }
+      },
+      "VehicleWebAPI.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "VehicleWebAPI.Model.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VehicleWebAPI.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VehicleWebAPI.Model.dll": {}
+        }
+      },
+      "VehicleWebAPI.Model.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/VehicleWebAPI.Model.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VehicleWebAPI.Model.Common.dll": {}
+        }
       }
     }
   },
@@ -713,11 +750,27 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "VehicleWebAPI.Common/1.0.0": {
+      "type": "project",
+      "path": "../VehicleWebAPI.Common/VehicleWebAPI.Common.csproj",
+      "msbuildProject": "../VehicleWebAPI.Common/VehicleWebAPI.Common.csproj"
+    },
+    "VehicleWebAPI.Model/1.0.0": {
+      "type": "project",
+      "path": "../VehicleWebAPI.Model/VehicleWebAPI.Model.csproj",
+      "msbuildProject": "../VehicleWebAPI.Model/VehicleWebAPI.Model.csproj"
+    },
+    "VehicleWebAPI.Model.Common/1.0.0": {
+      "type": "project",
+      "path": "../VehicleWebAPI.Model.Common/VehicleWebAPI.Model.Common.csproj",
+      "msbuildProject": "../VehicleWebAPI.Model.Common/VehicleWebAPI.Model.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Microsoft.EntityFrameworkCore.Design >= *"
+      "Microsoft.EntityFrameworkCore.Design >= *",
+      "VehicleWebAPI.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -744,7 +797,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj": {
+              "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

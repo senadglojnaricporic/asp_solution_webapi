@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using AutoMapper;
 using VehicleWebAPI.Model;
-using VehicleWebAPI.Model.Common;
 using VehicleWebAPI.Service;
-using VehicleWebAPI.Service.Common;
+using VehicleWebAPI.Common;
 
 namespace VehicleWebAPI.WebAPI
 {
@@ -11,7 +10,7 @@ namespace VehicleWebAPI.WebAPI
     {
         public VehicleMakeProfile()
         {
-            CreateMap<IVehicleMakeGenericModel<VehicleModelDataModel>, IVehicleMakeGenericModel<VehicleModelViewModel>>().ReverseMap();
+            CreateMap<IVehicleMakeDataModel, VehicleMakeDataModel>().ReverseMap();
             CreateMap<VehicleMakeDataModel, VehicleMakeViewModel>().ReverseMap();
             CreateMap<List<VehicleMakeDataModel>, List<VehicleMakeViewModel>>().ReverseMap();
             CreateMap<IQueryModel, IFilteringGenericModel<VehicleMakeDataModel>>();

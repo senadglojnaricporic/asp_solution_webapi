@@ -25,7 +25,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj": {
+                "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -37,6 +41,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[*, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -185,7 +195,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj": {
+                "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

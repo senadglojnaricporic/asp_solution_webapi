@@ -1,6 +1,6 @@
 using System.Linq;
 using VehicleWebAPI.Model;
-using VehicleWebAPI.Service.Common;
+using VehicleWebAPI.Common;
 
 namespace VehicleWebAPI.Service
 {

@@ -2,7 +2,6 @@ using Autofac;
 using Microsoft.EntityFrameworkCore;
 using VehicleWebAPI.DAL;
 using VehicleWebAPI.Model;
-using VehicleWebAPI.Model.Common;
 using VehicleWebAPI.Repository;
 using VehicleWebAPI.Repository.Common;
 using VehicleWebAPI.Service;
@@ -21,10 +20,8 @@ namespace VehicleWebAPI.WebAPI
                                 .As<IVehicleWebAPIGenericRepository<VehicleMakeDataModel>>()
                                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<VehicleMakeViewModel>().As<IVehicleMakeGenericModel<VehicleModelViewModel>>();
-
             builder.RegisterType<VehicleMakeService>()
-                                .As<IVehicleGenericService<IVehicleMakeGenericModel<VehicleModelViewModel>>>()
+                                .As<IVehicleGenericService<IVehicleMakeDataModel, VehicleMakeDataModel>>()
                                 .InstancePerLifetimeScope();
         }
     }

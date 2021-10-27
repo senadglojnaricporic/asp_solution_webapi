@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore;
+using VehicleWebAPI.Common;
 
 namespace VehicleWebAPI.Repository.Common
 {
@@ -15,5 +16,8 @@ namespace VehicleWebAPI.Repository.Common
         EntityEntry<T> Update(T entity);
         Task<EntityEntry<T>> DeleteAsync(int id);
         IQueryable<T> GetTable();
+        Task<IEnumerable<T>> FindDataAsync(IFilteringGenericModel<T> filtering, 
+                                            ISortingGenericModel<T> sorting, 
+                                                IPagingGenericModel<T> paging);
     }
 }

@@ -243,6 +243,20 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
+      "VehicleWebAPI.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "0.0.0",
+          "VehicleWebAPI.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VehicleWebAPI.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VehicleWebAPI.Common.dll": {}
+        }
+      },
       "VehicleWebAPI.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -270,7 +284,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "0.0.0"
+          "Microsoft.EntityFrameworkCore.Design": "0.0.0",
+          "VehicleWebAPI.Common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/VehicleWebAPI.Repository.Common.dll": {}
@@ -282,6 +297,10 @@
       "VehicleWebAPI.Service.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "VehicleWebAPI.Common": "1.0.0",
+          "VehicleWebAPI.Model": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/VehicleWebAPI.Service.Common.dll": {}
         },
@@ -852,6 +871,11 @@
         "version.txt"
       ]
     },
+    "VehicleWebAPI.Common/1.0.0": {
+      "type": "project",
+      "path": "../VehicleWebAPI.Common/VehicleWebAPI.Common.csproj",
+      "msbuildProject": "../VehicleWebAPI.Common/VehicleWebAPI.Common.csproj"
+    },
     "VehicleWebAPI.Model/1.0.0": {
       "type": "project",
       "path": "../VehicleWebAPI.Model/VehicleWebAPI.Model.csproj",
@@ -877,6 +901,7 @@
     "net5.0": [
       "AutoMapper >= 10.1.1",
       "Microsoft.EntityFrameworkCore.Design >= *",
+      "VehicleWebAPI.Common >= 1.0.0",
       "VehicleWebAPI.Model >= 1.0.0",
       "VehicleWebAPI.Model.Common >= 1.0.0",
       "VehicleWebAPI.Repository.Common >= 1.0.0",
@@ -908,6 +933,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj": {
+              "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj"
+            },
             "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj": {
               "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj"
             },

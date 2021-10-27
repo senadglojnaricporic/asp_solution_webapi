@@ -8,4 +8,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="*" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleWebAPI.Common\VehicleWebAPI.Common.csproj" />
+  </ItemGroup>
+
 </Project>

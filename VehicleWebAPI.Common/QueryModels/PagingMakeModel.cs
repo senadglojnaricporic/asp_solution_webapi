@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using VehicleWebAPI.Model;
-using VehicleWebAPI.Service.Common;
+using VehicleWebAPI.Common;
 
 namespace VehicleWebAPI.Service
 {

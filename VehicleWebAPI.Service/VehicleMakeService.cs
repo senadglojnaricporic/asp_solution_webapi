@@ -1,34 +1,30 @@
 ﻿using System;
 using VehicleWebAPI.Repository.Common;
 using VehicleWebAPI.Model;
-using VehicleWebAPI.Model.Common;
 using AutoMapper;
 using System.Threading.Tasks;
 using VehicleWebAPI.Service.Common;
 using System.Collections.Generic;
+using VehicleWebAPI.Common;
 
 namespace VehicleWebAPI.Service
 {
-    public class VehicleMakeService : IVehicleMakeService<IVehicleMakeGenericModel<VehicleModelViewModel>>
+    public class VehicleMakeService : IVehicleGenericService<IVehicleMakeDataModel, VehicleMakeDataModel>
     {
         private readonly IVehicleWebAPIGenericRepository<VehicleMakeDataModel> _vehicleMakeRepository;
-        private readonly IMapper _mapper;
 
-        public VehicleMakeService(IVehicleWebAPIGenericRepository<VehicleMakeDataModel> vehicleMakeRepository,
-                                IMapper mapper)
+        public VehicleMakeService(IVehicleWebAPIGenericRepository<VehicleMakeDataModel> vehicleMakeRepository)
         {
             _vehicleMakeRepository = vehicleMakeRepository;
-            _mapper = mapper;
         }
 
-        public async Task CreateItemAsync(IVehicleMakeGenericModel<VehicleModelViewModel> item)
+        public async Task CreateItemAsync(IVehicleMakeDataModel item)
         {
-            var vehicleMakeDataModel = _mapper.Map<VehicleMakeDataModel>(item);
-            await _vehicleMakeRepository.CreateAsync(vehicleMakeDataModel);
+            await _vehicleMakeRepository.CreateAsync((VehicleMakeDataModel) item);
             await _vehicleMakeRepository.SaveAsync();
         }
 
-        public async Task<IVehicleMakeGenericModel<VehicleModelViewModel>> ReadItemAsync(int id)
+        public async Task<IVehicleMakeDataModel> ReadItemAsync(int id)
         {
             var vehicleMakeDataModel = await _vehicleMakeRepository.ReadByIdAsync(id);
 
@@ -37,14 +33,12 @@ namespace VehicleWebAPI.Service
                 return null;
             }
 
-            var vehicleMakeViewModel = _mapper.Map<VehicleMakeViewModel>(vehicleMakeDataModel);
-            return vehicleMakeViewModel;
+            return vehicleMakeDataModel;
         }
 
-        public async Task UpdateItemAsync(IVehicleMakeGenericModel<VehicleModelViewModel> item)
+        public async Task UpdateItemAsync(IVehicleMakeDataModel item)
         {
-            var vehicleMakeDataModel = _mapper.Map<VehicleMakeDataModel>(item);
-            _vehicleMakeRepository.Update(vehicleMakeDataModel);
+            _vehicleMakeRepository.Update((VehicleMakeDataModel) item);
             await _vehicleMakeRepository.SaveAsync();
         }
 
@@ -62,23 +56,11 @@ namespace VehicleWebAPI.Service
             }
         }
 
-        public async Task<IEnumerable<VehicleMakeViewModel>> GetPageAsync(IFilteringGenericModel<VehicleMakeDataModel> filtering, 
+        public async Task<IEnumerable<VehicleMakeDataModel>> FindDataAsync(IFilteringGenericModel<VehicleMakeDataModel> filtering, 
                                                                         ISortingGenericModel<VehicleMakeDataModel> sorting, 
                                                                         IPagingGenericModel<VehicleMakeDataModel> paging)
         {
-            var source = _vehicleMakeRepository.GetTable();
-
-            if(!String.IsNullOrEmpty(filtering.filterType))
-            {
-                filtering.Filter(ref source);
-            }
-
-            sorting.Sort(ref source);
-
-            var listDataModel = await paging.PageAsync(source);
-            var listViewmodel = _mapper.Map<List<VehicleMakeViewModel>>(listDataModel);
-
-            return listViewmodel;
+            return await _vehicleMakeRepository.FindDataAsync(filtering, sorting, paging);
         }
     }
 }

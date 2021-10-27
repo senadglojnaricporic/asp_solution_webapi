@@ -5,6 +5,7 @@
     <ProjectReference Include="..\VehicleWebAPI.Model\VehicleWebAPI.Model.csproj" />
     <ProjectReference Include="..\VehicleWebAPI.Model.Common\VehicleWebAPI.Model.Common.csproj" />
     <ProjectReference Include="..\VehicleWebAPI.Service.Common\VehicleWebAPI.Service.Common.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.Common\VehicleWebAPI.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
