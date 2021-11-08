@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj": {}
+    "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj": {}
   },
   "projects": {
-    "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj": {
+    "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj",
+        "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj",
         "projectName": "VehicleWebAPI.Model.Common",
-        "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj",
+        "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj",
         "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
-        "outputPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\obj\\",
+        "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"

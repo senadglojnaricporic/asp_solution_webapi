@@ -8,6 +8,7 @@ namespace VehicleWebAPI.DAL
         private readonly string _connectionString;
 
         public DbSet<VehicleMakeDataModel> VehicleMakes { get; set; }
+        public DbSet<VehicleModelDataModel> VehicleModels { get; set; }
 
         public VehicleWebAPIDbContext(string connectionString = null)
         {

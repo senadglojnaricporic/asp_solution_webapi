@@ -1112,11 +1112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj",
+      "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj",
       "projectName": "VehicleWebAPI.DAL",
-      "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj",
+      "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj",
       "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
-      "outputPath": "F:\\asp_solution_webapi\\VehicleWebAPI.DAL\\obj\\",
+      "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1131,8 +1131,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj": {
-              "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj"
+            "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj": {
+              "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj"
             }
           }
         }

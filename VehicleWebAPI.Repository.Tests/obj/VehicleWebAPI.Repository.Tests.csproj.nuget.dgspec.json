@@ -4,14 +4,142 @@
     "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Tests\\VehicleWebAPI.Repository.Tests.csproj": {}
   },
   "projects": {
-    "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Tests\\VehicleWebAPI.Repository.Tests.csproj": {
+    "f:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Tests\\VehicleWebAPI.Repository.Tests.csproj",
-        "projectName": "VehicleWebAPI.Repository.Tests",
-        "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Tests\\VehicleWebAPI.Repository.Tests.csproj",
+        "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj",
+        "projectName": "VehicleWebAPI.Common",
+        "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj",
         "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
-        "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Tests\\obj\\",
+        "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj": {
+                "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "f:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj",
+        "projectName": "VehicleWebAPI.DAL",
+        "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj",
+        "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
+        "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj": {
+                "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[*, )"
+            },
+            "Microsoft.EntityFrameworkCore.SQLite": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj",
+        "projectName": "VehicleWebAPI.Model.Common",
+        "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj",
+        "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
+        "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,10 +165,201 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj",
+        "projectName": "VehicleWebAPI.Model",
+        "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj",
+        "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
+        "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj": {
+                "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Common\\VehicleWebAPI.Repository.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Common\\VehicleWebAPI.Repository.Common.csproj",
+        "projectName": "VehicleWebAPI.Repository.Common",
+        "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Common\\VehicleWebAPI.Repository.Common.csproj",
+        "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
+        "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "f:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj": {
+                "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Tests\\VehicleWebAPI.Repository.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Tests\\VehicleWebAPI.Repository.Tests.csproj",
+        "projectName": "VehicleWebAPI.Repository.Tests",
+        "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Tests\\VehicleWebAPI.Repository.Tests.csproj",
+        "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
+        "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "f:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj": {
+                "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj"
+              },
+              "f:\\asp_solution_webapi\\VehicleWebAPI.Repository\\VehicleWebAPI.Repository.csproj": {
+                "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository\\VehicleWebAPI.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.7.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -57,6 +376,74 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "f:\\asp_solution_webapi\\VehicleWebAPI.Repository\\VehicleWebAPI.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository\\VehicleWebAPI.Repository.csproj",
+        "projectName": "VehicleWebAPI.Repository",
+        "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository\\VehicleWebAPI.Repository.csproj",
+        "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
+        "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "f:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj": {
+                "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj"
+              },
+              "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj": {
+                "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj"
+              },
+              "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Common\\VehicleWebAPI.Repository.Common.csproj": {
+                "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Common\\VehicleWebAPI.Repository.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[*, )"
             }
           },
           "imports": [
