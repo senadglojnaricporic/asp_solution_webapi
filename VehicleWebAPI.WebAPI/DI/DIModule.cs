@@ -20,8 +20,16 @@ namespace VehicleWebAPI.WebAPI
                                 .As<IVehicleWebAPIGenericRepository<VehicleMakeDataModel>>()
                                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<VehicleWebAPIGenericRepository<VehicleModelDataModel>>()
+                                .As<IVehicleWebAPIGenericRepository<VehicleModelDataModel>>()
+                                .InstancePerLifetimeScope();
+
             builder.RegisterType<VehicleMakeService>()
                                 .As<IVehicleGenericService<IVehicleMakeDataModel, VehicleMakeDataModel>>()
+                                .InstancePerLifetimeScope();
+
+            builder.RegisterType<VehicleModelService>()
+                                .As<IVehicleGenericService<IVehicleModelDataModel, VehicleModelDataModel>>()
                                 .InstancePerLifetimeScope();
         }
     }

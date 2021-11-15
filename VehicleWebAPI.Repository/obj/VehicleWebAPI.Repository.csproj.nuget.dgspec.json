@@ -44,7 +44,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[5.0.11, )"
             }
           },
           "imports": [
@@ -214,7 +214,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[5.0.11, )"
             }
           },
           "imports": [
@@ -282,7 +282,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[5.0.11, )"
             }
           },
           "imports": [

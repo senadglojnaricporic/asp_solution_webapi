@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using VehicleWebAPI.Model;
@@ -42,16 +40,16 @@ namespace VehicleWebAPI.WebAPI
         [HttpGet("{id}")]
         public async Task<ActionResult<VehicleMakeViewModel>> GetVehicleMakeDataModel(int id)//read by id
         {
-            var vehicleMakeDataModel = await _service.ReadItemAsync(id);
-
-            if (vehicleMakeDataModel == null)
+            try
+            {
+                var vehicleMakeDataModel = await _service.ReadItemAsync(id);
+                var vehicleMakeViewModel = _mapper.Map<VehicleMakeViewModel>(vehicleMakeDataModel);
+                return (VehicleMakeViewModel)vehicleMakeViewModel;
+            }
+            catch(NullReferenceException)
             {
                 return NotFound();
             }
-
-            var vehicleMakeViewModel = _mapper.Map<VehicleMakeViewModel>(vehicleMakeDataModel);
-
-            return (VehicleMakeViewModel)vehicleMakeViewModel;
         }
 
         // PUT: api/VehicleMake/5
@@ -99,18 +97,28 @@ namespace VehicleWebAPI.WebAPI
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVehicleMakeDataModel(int id)//delete
         {
-            var success = await _service.DeleteItemAsync(id);
-            if (!success)
+            var res = await _service.DeleteItemAsync(id);
+            if(res)
+            {
+                return NoContent();
+            }
+            else
             {
                 return NotFound();
             }
-
-            return NoContent();
         }
 
         private async Task<bool> VehicleMakeDataModelExists(int id)
         {
-            return await _service.ReadItemAsync(id) != null;
+            try
+            {
+                var data = await _service.ReadItemAsync(id);
+                return true;
+            }
+            catch(NullReferenceException)
+            {
+                return false;
+            }
         }
     }
 }

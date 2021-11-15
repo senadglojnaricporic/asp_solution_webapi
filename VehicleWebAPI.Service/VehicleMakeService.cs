@@ -1,7 +1,6 @@
 ﻿using System;
 using VehicleWebAPI.Repository.Common;
 using VehicleWebAPI.Model;
-using AutoMapper;
 using System.Threading.Tasks;
 using VehicleWebAPI.Service.Common;
 using System.Collections.Generic;
@@ -18,22 +17,23 @@ namespace VehicleWebAPI.Service
             _vehicleMakeRepository = vehicleMakeRepository;
         }
 
-        public async Task CreateItemAsync(IVehicleMakeDataModel item)
+        public async Task<int> CreateItemAsync(IVehicleMakeDataModel item)
         {
             await _vehicleMakeRepository.CreateAsync((VehicleMakeDataModel) item);
-            await _vehicleMakeRepository.SaveAsync();
+            return await _vehicleMakeRepository.SaveAsync();
         }
 
         public async Task<IVehicleMakeDataModel> ReadItemAsync(int id)
         {
-            var vehicleMakeDataModel = await _vehicleMakeRepository.ReadByIdAsync(id);
-
-            if(vehicleMakeDataModel == null)
+            try
+            {
+                var vehicleMakeDataModel = await _vehicleMakeRepository.ReadByIdAsync(id);
+                return vehicleMakeDataModel;
+            }
+            catch(NullReferenceException)
             {
                 return null;
             }
-
-            return vehicleMakeDataModel;
         }
 
         public async Task UpdateItemAsync(IVehicleMakeDataModel item)
@@ -44,15 +44,15 @@ namespace VehicleWebAPI.Service
 
         public async Task<bool> DeleteItemAsync(int id)
         {
-            var entry = await _vehicleMakeRepository.DeleteAsync(id);
-            if(entry == null)
-            {
-                return false;
-            }
-            else
+            var res = await _vehicleMakeRepository.DeleteAsync(id);
+            if(res)
             {
                 await _vehicleMakeRepository.SaveAsync();
                 return true;
+            }
+            else
+            {
+                return false;
             }
         }
 

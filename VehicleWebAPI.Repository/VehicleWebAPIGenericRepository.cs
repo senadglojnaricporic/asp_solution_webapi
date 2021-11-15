@@ -25,9 +25,9 @@ namespace VehicleWebAPI.Repository
             return await _DbContext.SaveChangesAsync();
         }
 
-        public async Task<EntityEntry<T>> CreateAsync(T entity) 
+        public async Task CreateAsync(T entity) 
         {
-            return await _DbContext.Set<T>().AddAsync(entity);
+            await _DbContext.Set<T>().AddAsync(entity);
         }
 
         public async Task<T> ReadByIdAsync(int id) 
@@ -35,21 +35,23 @@ namespace VehicleWebAPI.Repository
             return await _DbContext.Set<T>().FindAsync(id);
         }
 
-        public EntityEntry<T> Update(T entity) 
+        public void Update(T entity) 
         {
-            return _DbContext.Set<T>().Update(entity);
+            _DbContext.Set<T>().Update(entity);
         }
 
-        public async Task<EntityEntry<T>> DeleteAsync(int id) 
+        public async Task<bool> DeleteAsync(int id) 
         {
-            var entity = await _DbContext.Set<T>().FindAsync(id);
-
-            if(entity == null)
+            try
             {
-                return null;
+                var entity = await _DbContext.Set<T>().FindAsync(id);
+                _DbContext.Set<T>().Remove(entity);
+                return true;
             }
-
-            return _DbContext.Set<T>().Remove(entity);
+            catch(ArgumentNullException)
+            {
+                return false;
+            }
         }
 
         public IQueryable<T> GetTable()

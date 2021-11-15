@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8AI/08Hlh6Kxl80qSVJAUK2IOw0LPLCX+gKzysFRcnkNCtcuNLcPx4WYtt1pLNMgWX3weioAdjQ8tMekXgYiyw==",
+  "dgSpecHash": "YohsdoEwH71IXz3fCbwk7fi3se+f/A/POLuPZXZJQ8Fk0rX0vx/qYdmQVZGLvx6jYeV8YZSufL/y/z45GUJqWA==",
   "success": true,
   "projectFilePath": "f:\\asp_solution_webapi\\VehicleWebAPI.Common\\VehicleWebAPI.Common.csproj",
   "expectedPackageFiles": [

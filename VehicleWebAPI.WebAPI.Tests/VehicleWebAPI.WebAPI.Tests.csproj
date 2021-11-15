@@ -7,7 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="FluentAssertions" Version="6.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="Moq" Version="4.16.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -19,4 +22,14 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleWebAPI.Model\VehicleWebAPI.Model.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.Service.Common\VehicleWebAPI.Service.Common.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.Common\VehicleWebAPI.Common.csproj" />
+    <ProjectReference Include="..\VehicleWebAPI.WebAPI\VehicleWebAPI.WebAPI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+   <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
 </Project>

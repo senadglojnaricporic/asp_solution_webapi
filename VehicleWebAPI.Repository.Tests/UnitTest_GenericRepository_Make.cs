@@ -1,11 +1,8 @@
 using System.Linq;
 using Xunit;
-using Moq;
 using FluentAssertions;
 using VehicleWebAPI.DAL;
 using VehicleWebAPI.Model;
-using VehicleWebAPI.Common;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using System.Collections.Generic;
 using VehicleWebAPI.Service;
@@ -21,7 +18,7 @@ namespace VehicleWebAPI.Repository.Tests
         }
 
         [Fact]
-        public async void Test_1_CreateAsync_Make()
+        public async void Test_CreateAsync_Make()
         {
             //Arrange
             var repo = new VehicleWebAPIGenericRepository<VehicleMakeDataModel>(dbContext);
@@ -31,17 +28,9 @@ namespace VehicleWebAPI.Repository.Tests
                 Abrv = "VW",
             };
             //Act
-            var entry = await repo.CreateAsync(make);
-            var values = entry.CurrentValues;
-            var id = values["Id"];
-            var name = values["Name"];
-            var abrv = values["Abrv"];
+            await repo.CreateAsync(make);
             var numOfEntries = await repo.SaveAsync();
             //Assert
-            entry.Should().BeOfType<EntityEntry<VehicleMakeDataModel>>();
-            id.Should().Be(make.Id);
-            name.Should().Be(make.Name);
-            abrv.Should().Be(make.Abrv);
             numOfEntries.Should().Be(1);
 
             //Clear table
@@ -54,7 +43,7 @@ namespace VehicleWebAPI.Repository.Tests
         }
 
         [Fact]
-        public async void Test_2_ReadByIdAsync_Make()
+        public async void Test_ReadByIdAsync_Make()
         {
             //Arrange
             var repo = new VehicleWebAPIGenericRepository<VehicleMakeDataModel>(dbContext);
@@ -83,7 +72,7 @@ namespace VehicleWebAPI.Repository.Tests
         }
 
         [Fact]
-        public async void Test_3_Update_Make()
+        public async void Test_Update_Make()
         {
             //Arrange
             var repo = new VehicleWebAPIGenericRepository<VehicleMakeDataModel>(dbContext);
@@ -101,17 +90,9 @@ namespace VehicleWebAPI.Repository.Tests
                 Abrv = "GM",
             };
             //Act
-            var entry = repo.Update(make);
-            var values = entry.CurrentValues;
-            var id = values["Id"];
-            var name = values["Name"];
-            var abrv = values["Abrv"];
+            repo.Update(make);
             var numOfEntries = await repo.SaveAsync();
             //Assert
-            entry.Should().BeOfType<EntityEntry<VehicleMakeDataModel>>();
-            id.Should().Be(make.Id);
-            name.Should().Be(make.Name);
-            abrv.Should().Be(make.Abrv);
             numOfEntries.Should().Be(1);
 
             //Clear table
@@ -124,7 +105,7 @@ namespace VehicleWebAPI.Repository.Tests
         }
 
         [Fact]
-        public async void Test_4_DeleteAsync_Make()
+        public async void Test_DeleteAsync_Make_ItemFound()
         {
             //Arrange
             var repo = new VehicleWebAPIGenericRepository<VehicleMakeDataModel>(dbContext);
@@ -136,17 +117,10 @@ namespace VehicleWebAPI.Repository.Tests
             await dbContext.VehicleMakes.AddAsync(_make);
             await dbContext.SaveChangesAsync();
             //Act
-            var entry = await repo.DeleteAsync(1);
-            var values = entry.CurrentValues;
-            var id = values["Id"];
-            var name = values["Name"];
-            var abrv = values["Abrv"];
+            var res = await repo.DeleteAsync(1);
             var numOfEntries = await repo.SaveAsync();
             //Assert
-            entry.Should().BeOfType<EntityEntry<VehicleMakeDataModel>>();
-            id.Should().Be(_make.Id);
-            name.Should().Be(_make.Name);
-            abrv.Should().Be(_make.Abrv);
+            res.Should().BeTrue();
             numOfEntries.Should().Be(1);
 
             //Clear table
@@ -159,7 +133,35 @@ namespace VehicleWebAPI.Repository.Tests
         }
 
         [Fact]
-        public void Test_4_GetTable_Make()
+        public async void Test_DeleteAsync_Make_ItemNotFound()
+        {
+            //Arrange
+            var repo = new VehicleWebAPIGenericRepository<VehicleMakeDataModel>(dbContext);
+            var _make = new VehicleMakeDataModel() {
+                Id = 1,
+                Name = "Volkswagen",
+                Abrv = "VW",
+            };
+            await dbContext.VehicleMakes.AddAsync(_make);
+            await dbContext.SaveChangesAsync();
+            //Act
+            var res = await repo.DeleteAsync(2);
+            var numOfEntries = await repo.SaveAsync();
+            //Assert
+            res.Should().BeFalse();
+            numOfEntries.Should().Be(0);
+
+            //Clear table
+            var rows = from o in dbContext.VehicleMakes select o;
+            foreach(var row in rows)
+            {
+                dbContext.VehicleMakes.Remove(row);
+            }
+            await dbContext.SaveChangesAsync();
+        }
+
+        [Fact]
+        public void Test_GetTable_Make()
         {
             //Arrange
             var repo = new VehicleWebAPIGenericRepository<VehicleMakeDataModel>(dbContext);
@@ -170,7 +172,7 @@ namespace VehicleWebAPI.Repository.Tests
         }
 
         [Fact]
-        public async void Test_4_FindDataAsync_Make()
+        public async void Test_FindDataAsync_Make()
         {
             //Arrange
             var repo = new VehicleWebAPIGenericRepository<VehicleMakeDataModel>(dbContext);

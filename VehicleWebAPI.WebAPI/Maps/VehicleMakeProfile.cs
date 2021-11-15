@@ -20,6 +20,5 @@ namespace VehicleWebAPI.WebAPI
             CreateMap<QueryModel, SortingMakeModel>();
             CreateMap<QueryModel, PagingMakeModel>();
         }
-
     }
 }

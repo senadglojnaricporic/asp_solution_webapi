@@ -2282,7 +2282,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "0.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
           "VehicleWebAPI.Model": "1.0.0"
         },
         "compile": {
@@ -2296,7 +2296,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "0.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
           "Microsoft.EntityFrameworkCore.SQLite": "5.0.10",
           "VehicleWebAPI.Model": "1.0.0"
         },
@@ -2334,7 +2334,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "0.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
           "VehicleWebAPI.Common": "1.0.0",
           "VehicleWebAPI.Model": "1.0.0",
           "VehicleWebAPI.Repository.Common": "1.0.0"
@@ -2350,7 +2350,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "0.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
           "VehicleWebAPI.Common": "1.0.0"
         },
         "compile": {
@@ -2365,7 +2365,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "AutoMapper": "10.1.1",
-          "Microsoft.EntityFrameworkCore.Design": "0.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "5.0.11",
           "VehicleWebAPI.Common": "1.0.0",
           "VehicleWebAPI.Model": "1.0.0",
           "VehicleWebAPI.Model.Common": "1.0.0",
@@ -7917,11 +7917,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\asp_solution_webapi\\VehicleWebAPI.WebAPI\\VehicleWebAPI.WebAPI.csproj",
+      "projectUniqueName": "f:\\asp_solution_webapi\\VehicleWebAPI.WebAPI\\VehicleWebAPI.WebAPI.csproj",
       "projectName": "VehicleWebAPI.WebAPI",
-      "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.WebAPI\\VehicleWebAPI.WebAPI.csproj",
+      "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.WebAPI\\VehicleWebAPI.WebAPI.csproj",
       "packagesPath": "C:\\Users\\GameDev\\.nuget\\packages\\",
-      "outputPath": "F:\\asp_solution_webapi\\VehicleWebAPI.WebAPI\\obj\\",
+      "outputPath": "f:\\asp_solution_webapi\\VehicleWebAPI.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\GameDev\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -7936,26 +7936,26 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj": {
-              "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj"
+            "f:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj": {
+              "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.DAL\\VehicleWebAPI.DAL.csproj"
             },
-            "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj": {
-              "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj"
+            "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj": {
+              "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model.Common\\VehicleWebAPI.Model.Common.csproj"
             },
-            "F:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj": {
-              "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj"
+            "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj": {
+              "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Model\\VehicleWebAPI.Model.csproj"
             },
-            "F:\\asp_solution_webapi\\VehicleWebAPI.Repository.Common\\VehicleWebAPI.Repository.Common.csproj": {
-              "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Repository.Common\\VehicleWebAPI.Repository.Common.csproj"
+            "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Common\\VehicleWebAPI.Repository.Common.csproj": {
+              "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository.Common\\VehicleWebAPI.Repository.Common.csproj"
             },
-            "F:\\asp_solution_webapi\\VehicleWebAPI.Repository\\VehicleWebAPI.Repository.csproj": {
-              "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Repository\\VehicleWebAPI.Repository.csproj"
+            "f:\\asp_solution_webapi\\VehicleWebAPI.Repository\\VehicleWebAPI.Repository.csproj": {
+              "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Repository\\VehicleWebAPI.Repository.csproj"
             },
-            "F:\\asp_solution_webapi\\VehicleWebAPI.Service.Common\\VehicleWebAPI.Service.Common.csproj": {
-              "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Service.Common\\VehicleWebAPI.Service.Common.csproj"
+            "f:\\asp_solution_webapi\\VehicleWebAPI.Service.Common\\VehicleWebAPI.Service.Common.csproj": {
+              "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Service.Common\\VehicleWebAPI.Service.Common.csproj"
             },
-            "F:\\asp_solution_webapi\\VehicleWebAPI.Service\\VehicleWebAPI.Service.csproj": {
-              "projectPath": "F:\\asp_solution_webapi\\VehicleWebAPI.Service\\VehicleWebAPI.Service.csproj"
+            "f:\\asp_solution_webapi\\VehicleWebAPI.Service\\VehicleWebAPI.Service.csproj": {
+              "projectPath": "f:\\asp_solution_webapi\\VehicleWebAPI.Service\\VehicleWebAPI.Service.csproj"
             }
           }
         }

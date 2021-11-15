@@ -9,7 +9,7 @@ namespace VehicleWebAPI.Service.Common
     where Entity : class 
     where T : class
     {
-        Task CreateItemAsync(Entity item);
+        Task<int> CreateItemAsync(Entity item);
         Task<Entity> ReadItemAsync(int id);
         Task UpdateItemAsync(Entity item);
         Task<bool> DeleteItemAsync(int id);
